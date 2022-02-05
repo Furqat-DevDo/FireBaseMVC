@@ -1,1 +1,23 @@
-﻿
+﻿@model List<UserModel>
+<form asp-action="Index" method="post">
+    <table class="table">
+        <thead class="thead-gray">
+          <tr>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>BirthDate</th>
+          </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+          <tbody>
+          <tr>
+              <td>@item.FullName</td>
+              <td>@item.Email</td>
+              <td>@item.BirthDate</td>   
+          </tr>
+        </tbody>   
+        }  
+    </table>
+</form>
